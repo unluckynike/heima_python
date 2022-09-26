@@ -132,5 +132,67 @@ while i<=9:
     print()
     i+=1
 
+"""
+for 临时变量 in 序列:
+    重复执行的代码
+    ......
+"""
+str='itheima'
+for i in str:
+    print(i,end="\t")
+
+print("\n break")
+for i in str:
+    print(i,end="\t")
+    if i=='h': # 到 h 跳出循环
+        break
+
+print("\n coutinue")
+for i in str:
+    if i=='e':
+        continue
+    print(i) # 不会打印 e
 
 
+"""
+while...else
+"""
+i=0
+while i<5:
+    print("%%",end="\t")
+    i+=1
+else:
+    print("##")
+
+i=0
+while i<5:
+    if i==3:
+        break
+    print("$$", end="\t")
+    i+=1
+else:   # break 后 else 也不会输出
+    print("##")
+
+print("\n  continue")
+i=0
+while i<5:
+    if i==3:
+        i+=1   #记得重置计数器
+        continue
+    print("$$", end="\t")
+    i+=1
+else:
+    print("##")
+
+str="itheima"
+for i in str:
+    print(i,end="\t")
+else:
+    print("for end")
+
+print("continue")
+for i in  str:
+    if i=='e':
+        continue # e 没有输出
+        #break
+    print(i,end='\t')
