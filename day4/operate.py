@@ -50,7 +50,68 @@ print(str.split('and'))  # 不写num则所有都分割 会丢失分割符
 print(type(str.split('and', 1)))  # 列表 list 类型
 
 # 字符或⼦串.join(多字符串组成的序列)
-join_list=['aa','bb','cc']
+join_list = ['aa', 'bb', 'cc']
 print(".....".join(join_list))
 print(str)
 print(str.join(join_list))
+
+# capitalize():将字符串第一个字符转换成大写。
+# title():将字符串每个单词首字母转换成⼤写。
+# lower():将字符串中大写转⼩写。
+# upper():将字符串中小写转大写。
+print(str)
+print(str.capitalize())
+print(str.title())
+print(str.lower())
+print(str.upper())
+
+mystr = "   hello world and itcast and itheima and Python   "
+print(mystr, len(mystr))
+# 1. lstrip(): 删除左侧空白字符
+new_str = mystr.lstrip()
+print(new_str)
+# 2. rstrip(): 删除右侧空白字符
+new_str = mystr.rstrip()  # 鼠标点击查看末尾空百
+print(new_str, len(new_str))
+# 3.strip()：删除两侧空白字符
+new_str = mystr.strip()
+print(new_str)
+
+# ljust rjust center
+
+
+"""
+判断
+"""
+mystr = "hello world and itcast and itheima and Python"
+
+# 1. startswith(): 判断字符串是否以某个子串开头
+# 字符串序列.startswith(⼦串, 开始位置下标, 结束位置下标)
+print(mystr.startswith('hello'))
+print(mystr.startswith('hel'))
+print(mystr.startswith('hels'))
+
+# 2. endswith(): 判断字符串是否以某个子串结尾
+# 字符串序列.endswith(⼦串, 开始位置下标, 结束位置下标)
+print(mystr.endswith('Python'))
+print(mystr.endswith('Pythons'))
+
+# 3. isalpha(): 字母
+print('isalpha: ',mystr.isalpha())
+
+# 4. isdigit(): 数字
+print(mystr.isdigit())
+mystr1 = '12345'
+print(mystr1.isdigit())
+
+# 5. isalnum() : 数字或字母或组合
+print(mystr1.isalnum())
+print(mystr.isalnum())
+mystr2 = 'abc123'
+print(mystr2.isalnum())
+
+# 6.isspace(): 空白
+print(mystr.isspace())
+mystr3 = '   '
+print(mystr3.isspace())
+
